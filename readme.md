@@ -42,9 +42,9 @@ sector number:
 
 There is not too much validation and no reformatting of postcodes! An exception will be thrown if the parser can't parse the string. The parser expects well-formed, upper-case strings as input. If you want to validate or format postcodes, there are some other projects that appear to do this well:
 
-<https://github.com/andersonbispo/ukpcode> by @andersonbispo
+<https://github.com/andersonbispo/ukpcode> 
 
-<https://github.com/hamstah/ukpostcodeparser/blob/master/ukpostcodeparser/parser.py> by @hamstah
+<https://github.com/hamstah/ukpostcodeparser/blob/master/ukpostcodeparser/parser.py> 
 
 We also provide a utility for reading a file of postcodes. The file is expected to be csv and the first column only is read as a well-formed, upper-case postcode.
 
