@@ -3,7 +3,8 @@ UKPC
 
 [![Build Status](https://travis-ci.org/paul-wolf/ukpc.svg?branch=master)](https://travis-ci.org/paul-wolf/ukpc)
 
-ukpc is a Python module that parses United Kingdom postcode strings into constituent parts:
+ukpc is a Python module that parses United Kingdom postcode strings
+into constituent parts:
 
 * area
 * district
@@ -14,7 +15,7 @@ Install:
 
     pip install ukpc
 
-Currently, only Python 3.x is supported. Let me know if you need 2.7+ support. 
+Python 3.5 or greater is required. There are no dependencies outside the standard library. 
 
 Usage:
 
@@ -40,20 +41,27 @@ sector number:
 
 `farea` and `area` are the same. `funit` is the input string, the full postcode.
 
-There is not too much validation and no reformatting of postcodes! An exception will be thrown if the parser can't parse the string. The parser expects well-formed, upper-case strings as input. If you want to validate or format postcodes, there are some other projects that appear to do this well:
+There is not too much validation and no reformatting of postcodes! An
+exception will be thrown if the parser can't parse the string. The
+parser expects well-formed, upper-case strings as input. If you want
+to validate or format postcodes, there are some other projects that
+appear to do this well:
 
 <https://github.com/andersonbispo/ukpcode> 
 
 <https://github.com/hamstah/ukpostcodeparser/blob/master/ukpostcodeparser/parser.py> 
 
-We also provide a utility for reading a file of postcodes. The file is expected to be csv and the first column only is read as a well-formed, upper-case postcode.
+We also provide a utility for reading a file of postcodes. The file is
+expected to be csv and the first column only is read as a well-formed,
+upper-case postcode.
 
 ```
 from ukpc.utils import iterate_file
 iterate_file(path, callback=store_pc_in_database)
 ```
 
-`callback` is any callable that you must provide. This will cause `store_pc_in_database()` to be called with a `PostCode` instance.
+`callback` is any callable that you must provide. This will cause
+`store_pc_in_database()` to be called with a `PostCode` instance.
 
 There is also a command line util that calls `iterate_file()`: 
 
@@ -79,13 +87,12 @@ Testing
 -------
 
 	pip install pytest
-	cd logtrace
+	cd ukpc
  	pytest test.py --verbose
 
 or
 
-	python3 logtrace/test.py
+	python3 ukpc/test.py
 
-Performance
------------
+
 
